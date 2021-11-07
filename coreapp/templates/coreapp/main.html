@@ -72,11 +72,11 @@
     <div style="height: 100vh;width: 100%;">
 
         <div class="smallDiv">
-        <a href="#" class="btnMenu">
+        
             <box-icon id="btnMenu" name='menu-alt-right' style="position: absolute;
             left: 0;
             margin-left: 10px;" class="btnMenu"></box-icon>
-        </a>
+      
         <div style="margin-left: 40px;font-size: 20px;">Kkphotography_ke</div>
         <hr>
         </div>
@@ -88,12 +88,9 @@
         font-size: 20px;
         margin-top: 5px;
         color: black;
-        margin-left: 10px;">Kkphotograpyke</div>
-
-        <a href="">
-        <box-icon name='menu-alt-right' style="position: absolute;right: 0;margin-left: 10px;" class="btnMenux"></box-icon>
-
-        </a>
+        margin-left: 10px;">Kkphotograpy_ke</div>
+     <box-icon name='menu-alt-right' style="position: absolute;right: 0;margin-left: 10px;" class="btnMenux"></box-icon>
+   
     </div>
     <hr>
     <div style="display: flex;">
@@ -154,13 +151,13 @@
         const smallDiv=document.querySelector('.smallDiv');
      
         btnMenu.addEventListener('click',function(){
-            sidebar.classList.toggle('sidebar1')
-            smallDiv.classList.toggle('smallDiv1')
+            sidebar.style.display="block"
+            smallDiv.style.display="none"
         })
 
         btnMenux.addEventListener('click',function(){
-            sidebar.classList.add('sidebar')
-            smallDiv.classList.add('smallDiv')
+            sidebar.style.display="none"
+            smallDiv.style.display="block"
         })
      
      
