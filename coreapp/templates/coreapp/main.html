@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,12 +6,166 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital Chama</title>
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://unpkg.com/boxicons@2.0.9/dist/boxicons.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
-<body>
+<style>
+     .sidebar1{
+        display:block ;
+        width: 40vh;
+        background-color: cornflowerblue;
+        padding: 20px;
+        height: 100%;
+    }
+    .smallDiv{
+        position: relative;
+        display: none;
+        padding: 10px;
+    }
+    .sidebar{
+        width: 40vh;
+        background-color: cornflowerblue;
+        padding: 20px;
+        height: 100%;
+    }
+    .smallDiv1{
+        display: none;
+        position: relative;
+        display: block;
+        padding: 10px;
+    }
+   
+@media only screen and (max-width:600px){
     
+    .sidebar{
+        display:none ;
+    }
+    .sidebar1{
+        display:block ;
+        width: 40vh;
+        position: fixed;
+        background-color: cornflowerblue;
+        padding: 20px;
+        height: 100%;
+    }
+   
+    .smallDiv{
+        display: block;
+        position: relative;
+        display: block;
+        padding: 10px;
+    }
+    .smallDiv1{
+        display: none;
+       
+    }
+}
+</style>
+<body>
+ 
+    <div style="height: 100vh;width: 100%;">
+
+        <div class="smallDiv">
+        <a href="#" class="btnMenu">
+            <box-icon id="btnMenu" name='menu-alt-right' style="position: absolute;
+            left: 0;
+            margin-left: 10px;" class="btnMenu"></box-icon>
+        </a>
+        <div style="margin-left: 40px;font-size: 20px;">Kkphotography_ke</div>
+        <hr>
+        </div>
+ <div  class="sidebar">
+
+    <div style="display: flex;position: relative;" >
+        <box-icon type='logo' name='flutter'></box-icon>
+        <div style="line-height: 10px;
+        font-size: 20px;
+        margin-top: 5px;
+        color: black;
+        margin-left: 10px;">Kkphotograpyke</div>
+
+        <a href="">
+        <box-icon name='menu-alt-right' style="position: absolute;right: 0;margin-left: 10px;" class="btnMenux"></box-icon>
+
+        </a>
+    </div>
+    <hr>
+    <div style="display: flex;">
+        <a href="" style="width: 100%;background-color: aliceblue;padding: 10px;border-radius: 10px;">
+            <div style="display: flex;">
+            <box-icon name='home' type='solid' ></box-icon>
+            <div style="color: black;margin-left: 10px;margin-top: 5px;">Home</div>
+            </div>
+        </a>
+    </div>
+    <br>
+    <div style="display: flex;">
+        <a href="" style="width: 100%;background-color: aliceblue;padding: 10px;border-radius: 10px;">
+            <div style="display: flex;">
+                <box-icon type='logo' name='spring-boot'></box-icon>
+            <div style="color: black;margin-left: 10px;margin-top: 5px;">Wedding</div>
+            </div>
+        </a>
+    </div>
+    <br>
+    <div style="display: flex;">
+        <a href="" style="width: 100%;background-color: aliceblue;padding: 10px;border-radius: 10px;">
+            <div style="display: flex;">
+                <box-icon name='calendar-event' type='solid' ></box-icon>
+            <div style="color: black;margin-left: 10px;margin-top: 5px;">Events</div>
+            </div>
+        </a>
+    </div>
+    <br>
+    <div style="display: flex;">
+        <a href="" style="width: 100%;background-color: aliceblue;padding: 10px;border-radius: 10px;">
+            <div style="display: flex;">
+                <box-icon name='analyse' type='solid' ></box-icon>
+            <div style="color: black;margin-left: 10px;margin-top: 5px;">Corporate</div>
+            </div>
+        </a>
+    </div>
+    <br>
+    <div style="display: flex;">
+        <a href="" style="width: 100%;background-color: aliceblue;padding: 10px;border-radius: 10px;">
+            <div style="display: flex;">
+                <box-icon name='shape-circle' ></box-icon>
+            <div style="color: black;margin-left: 10px;margin-top: 5px;">Patroit</div>
+            </div>
+        </a>
+    </div>
+    
+    </div>
+
     {% block title %}
         
     {% endblock title %}
-        
+
+    <script>
+        const btnMenu=document.querySelector('.btnMenu');
+        const btnMenux=document.querySelector('.btnMenux');
+        const sidebar=document.querySelector('.sidebar');
+        const smallDiv=document.querySelector('.smallDiv');
+     
+        btnMenu.addEventListener('click',function(){
+            sidebar.classList.toggle('sidebar1')
+            smallDiv.classList.toggle('smallDiv1')
+        })
+
+        btnMenux.addEventListener('click',function(){
+            sidebar.classList.add('sidebar')
+            smallDiv.classList.add('smallDiv')
+        })
+     
+     
+     </script
 </body>
 </html>
+
+
